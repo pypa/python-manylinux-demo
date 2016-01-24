@@ -1,6 +1,7 @@
 language: c
-
 sudo: required
+notifications:
+  email: false
 
 services:
   - docker
