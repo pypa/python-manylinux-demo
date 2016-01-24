@@ -9,5 +9,7 @@ install:
   - docker pull quay.io/manylinux/manylinux:latest
 
 script:
-  - docker run --rm `pwd`:/io quay.io/manylinux/manylinux:latest \
+  - docker run --rm -v `pwd`:/io quay.io/manylinux/manylinux:latest \
       bash /io/travis/build-wheels.sh
+  - ls wheelhouse/
+  
