@@ -1,4 +1,5 @@
-# python-manylinux-demo
+python-manylinux-demo
+=====================
 Demo project for building Python wheels for Linux with Travis-CI
 
 [![Build Status](https://travis-ci.org/pypa/python-manylinux-demo.svg?branch=master)](https://travis-ci.org/pypa/python-manylinux-demo)
@@ -21,7 +22,8 @@ This sample project contains a very simple C compile extension module that links
 to an external library (ATLAS, a linear algebra library). The build is
 configured via the `setup.py` file.
 
-## Continuous integration setup with Travis + Docker
+Continuous integration setup with Travis + Docker
+-------------------------------------------------
 
 The `.travis.yml` file in this repository sets up the build environment. The
 resulting build logs can be found at
@@ -34,3 +36,10 @@ build environments. This script builds the package using `pip`. But these
 wheels link against an external library. So to create self-contained libraries,
 the build script runs the wheels through
 [`auditwheel`](https://pypi.python.org/pypi/auditwheel).
+
+Code of Conduct
+---------------
+
+Everyone interacting in the python-manylinux-demo project's codebases, issue trackers,
+chat rooms, and mailing lists is expected to follow the
+[PyPA Code of Conduct](https://www.pypa.io/en/latest/code-of-conduct/).
