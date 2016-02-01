@@ -6,7 +6,7 @@ notifications:
 services:
   - docker
 
-env:
+matrix:
   include:
     - env: DOCKER_IMAGE=quay.io/pypa/manylinux1_x86_64
     - env: DOCKER_IMAGE=quay.io/pypa/manylinux1_i686
