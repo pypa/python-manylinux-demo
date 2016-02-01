@@ -14,5 +14,5 @@ install:
   - docker pull $DOCKER_IMAGE
 
 script:
-  - docker run --rm `pwd`:/io $DOCKER_IMAGE bash /io/travis/build-wheels.sh
+  - docker run --rm -v `pwd`:/io $DOCKER_IMAGE bash /io/travis/build-wheels.sh
   - ls wheelhouse/
