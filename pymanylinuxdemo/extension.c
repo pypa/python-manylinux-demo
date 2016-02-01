@@ -1,9 +1,5 @@
 #include "Python.h"
-#ifdef __APPLE__
-#include <Accelerate/Accelerate.h>
-#else
-#include "atlas/cblas.h"
-#endif
+#include "cblas.h"
 
 
 /* The wrapper to the underlying C function */

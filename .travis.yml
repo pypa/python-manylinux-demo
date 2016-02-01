@@ -1,6 +1,7 @@
 language: c
-
 sudo: required
+notifications:
+  email: false
 
 services:
   - docker
@@ -14,4 +15,4 @@ install:
 
 script:
   - docker run --rm `pwd`:/io $DOCKER_IMAGE bash /io/travis/build-wheels.sh
-  - ls
+  - ls wheelhouse/

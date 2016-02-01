@@ -3,6 +3,7 @@ from distutils.core import setup, Extension
 extension_module = Extension(
     'pymanylinuxdemo.extension',
      sources=['pymanylinuxdemo/extension.c'],
+     library_dirs=['/usr/lib64/atlas/'],
      libraries=['cblas']
 )
 
