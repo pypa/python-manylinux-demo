@@ -1,3 +1,4 @@
+#!/bin/bash
 PYTHON_VERSIONS="2.7 3.4 3.5"
 
 # Install a system package required by our library
