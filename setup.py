@@ -9,7 +9,7 @@ extension_module = Extension(
 )
 
 setup(
-    name = 'python-maylinux-demo',
+    name = 'python-manylinux-demo',
     version = '1.0',
     description = 'This is a demo package with a compiled C extension.',
     ext_modules = [extension_module],
