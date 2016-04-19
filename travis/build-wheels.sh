@@ -17,6 +17,6 @@ done
 
 # Install packages and test
 for PYTHON in ${PYTHON_VERSIONS}; do
-    /opt/${PYTHON}/bin/pip install python_maylinux_demo --no-index -f wheelhouse
+    /opt/${PYTHON}/bin/pip install python_manylinux_demo --no-index -f wheelhouse
     (cd $HOME; /opt/${PYTHON}/bin/nosetests pymanylinuxdemo)
 done
