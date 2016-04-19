@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e -x
 
 # Install a system package required by our library
 yum install -y atlas-devel
@@ -16,6 +17,6 @@ done
 
 # Install packages and test
 for PYBIN in /opt/python/*/bin/; do
-    ${PYBIN}/pip install python_manylinux_demo --no-index -f wheelhouse
+    ${PYBIN}/pip install python_manylinux_demo --no-index -f /io/wheelhouse
     (cd $HOME; ${PYBIN}/nosetests pymanylinuxdemo)
 done
