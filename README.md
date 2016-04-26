@@ -33,9 +33,11 @@ resulting build logs can be found at
 The `.travis.yml` file instructs Travis to run the script
 `travis/build-wheels.sh` inside of the 32-bit and 64-bit manylinux1 docker
 build environments. This script builds the package using `pip`. But these
-wheels link against an external library. So to create self-contained libraries,
+wheels link against an external library. So to create self-contained wheels,
 the build script runs the wheels through
-[`auditwheel`](https://pypi.python.org/pypi/auditwheel).
+[`auditwheel`](https://pypi.python.org/pypi/auditwheel), which copies the external
+library into the wheel itself, so that users won't need to install any extra non-PyPI
+dependencies.
 
 Code of Conduct
 ---------------
